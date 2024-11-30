@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+</head>
+
+<body>
+    <h1>Simple Counter</h1>
+    <div id="counter">0</div>
+    <button id="decrement">Decrement</button>
+    <button id="increment">Increment</button>
+
+    <script>
+        // Initialize counter value
+        let counterValue = 0;
+
+        // Get references to HTML elements
+        const counterDisplay = document.getElementById("counter");
+        const incrementButton = document.getElementById("increment");
+        const decrementButton = document.getElementById("decrement");
+
+        // Update the counter display function
+        function updateCounter() {
+            counterDisplay.textContent = counterValue;
+        }
+
+        // Increment counter
+        incrementButton.addEventListener("click", function () {
+            counterValue++;
+            updateCounter();
+        });
+
+        // Decrement counter
+        decrementButton.addEventListener("click", function () {
+            counterValue--;
+            updateCounter();
+        });
+    </script>
+</body>
+
+</html>
